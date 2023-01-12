@@ -1,0 +1,453 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Edu+VIC+WA+NT+Beginner:wght@400;500&family=Quicksand&display=swap');
+
+body {
+    font-family: 'Inter', sans-serif;
+}
+
+body.modal-open {
+    @apply overflow-hidden fixed
+  }
+
+button{
+    rotate: none;
+
+}
+
+.font-overpass {
+    font-family: 'Overpass', sans-serif;
+}
+
+.bg-first {
+    background-repeat: no-repeat;
+}
+
+
+.button-animation {
+    position: relative;
+    transition: 0.5s;
+    overflow: hidden;
+}
+
+.button-animation::before {
+    content: "";
+    display: block;
+    position: absolute;
+    height: 105%;
+    width: 0%;
+    top: 0;
+    left:-25px;
+    transform:skewX(-37.62deg);
+    z-index: -1;
+    background: #FF9B00;
+    transition: .5s;
+}
+
+.button-animation:hover:before,:focus:before {
+    width: 130%;
+}
+
+.button-animation:active::before {
+    background-color: #FF9B00B2;
+    transition: 0.1s;
+}
+
+.button-animation:active {
+    border-color: #FF9B00B2;
+    transition: 0.1s;
+}
+
+.section-title {
+    @apply text-4xl lg:text-5xl font-semibold font-overpass pl-0 lg:pl-36 
+}
+
+/* GALLERY SWIPER */
+
+.gallerySwiper {
+    @apply p-0 border-[10px] border-[#FF9B00] max-w-[100%] max-h-[100%] overflow-hidden
+}
+
+.swiper-button-disabled svg{
+    @apply opacity-50 hover:fill-black cursor-default
+}
+
+.gallerySwiper-pagination .swiper-pagination-bullet {
+    border-radius: 0;
+    @apply bg-gray-400 hover:bg-orange-400 active:bg-orange-400 shrink-0 h-[4px] w-[8px] lg:h-[10px] lg:w-[30px]
+}
+
+.gallerySwiper-pagination .swiper-pagination-bullet-active {
+    border-radius: 0;
+    @apply bg-orange-400
+}
+
+
+/* PARTNER SWIPER */
+
+.partnerSwiper {
+    @apply h-[220px] w-[900px] mx-auto overflow-hidden
+} 
+
+.partnerSwiperMobile {
+    @apply w-[220px] mx-auto overflow-hidden
+}
+
+.partnerSwiperMobile .swiper-slide {
+    @apply flex justify-center content-center 
+}
+
+/* POP QUERY SWIPER */
+
+.popQuerySwiper {
+    @apply overflow-visible
+}
+
+
+
+.popQuerySwiper .swiper-slide {
+    @apply w-[240px] sm:w-[480px] lg:w-[600px]
+}
+
+.popQueryImageSwiper-pagination .swiper-pagination-bullet {
+    border-radius: 0;
+    @apply bg-white hover:bg-orange-400 active:bg-orange-400 shrink-0 h-[8px] w-[24px] backdrop-opacity-100
+}
+
+.popQueryImageSwiper-pagination .swiper-pagination-bullet-active {
+    border-radius: 0;
+    @apply bg-orange-400
+}  
+
+.pop-query__card_link {
+    @apply flex flex-col content-between gap-10 mb-5
+}
+
+.pop-query__card_link svg{
+    transition: .1s;
+    @apply relative right-0 top-0 transition-all
+}
+
+.pop-query__card_link .before-price{
+    @apply text-lg lg:text-3xl font-light font-overpass
+}
+
+
+.pop-query__card_link:hover svg{
+    transition: 0.1s;
+    @apply rotate-45 transition-all
+}
+
+.pop-query__card_link:active svg{
+    transition: .1s;
+    @apply transition-all relative right-[-30px] opacity-0
+}
+
+.before-price::before{
+    content: "от";
+    @apply text-base lg:text-xl font-light pr-1
+}
+
+
+
+
+/* nav */
+@layer components{
+    .nav {
+        @apply font-bold text-xl flex justify-between
+    }
+    
+    .nav a{
+        @apply hover:text-blue-900
+    }
+    
+    .nav li + li::before{
+        content: '';
+        @apply border-l-4 px-9
+    }
+}
+
+/* logo */
+
+@layer components {
+    .logo-link:hover svg {
+        @apply fill-[#3e4f8d] transition-all duration-200
+    }
+}
+
+/* card */
+@layer components {
+
+    
+    .card {
+        @apply px-4 pt-8 border-2 border-black col-span-4 lg:col-span-1 grid gap-y-4 row-auto justify-self-center lg:max-w-none min-w-full min-h-full
+    }
+    
+    .card__title {
+        @apply text-xl font-bold  min-h-[85px]
+    }
+
+    .card>img{
+        @apply self-center justify-self-center object-cover min-w-full
+    }
+    
+    .card__link {
+        @apply flex justify-end pb-4
+    }
+    
+    .card__link img{
+        max-width: 46px;
+        max-height: 46px;
+        @apply relative right-0 transition-all duration-200
+    }
+    
+    .card__link:hover img, .card__link:focus img{
+        @apply rotate-45 transition-all duration-200
+    }
+
+    .card__link:active img{
+        @apply transition-all duration-200 opacity-0 -right-10
+    }
+    
+    .card__link_text {
+        @apply h-1/5 text-xl font-overpass font-semibold text-[#00437B] pt-3 pr-2 
+    }
+
+    .card__link_text> img{
+        @apply self-end
+    }
+}    
+
+/* block-news */
+@layer components {
+    .block-news {
+        @apply grid grid-rows-2 border-t-4 border-gray-400 pt-11 col-span-4 lg:col-span-2
+    }
+    
+    .block-news_overflow {
+        @apply hidden lg:grid
+    }
+
+    .block-news .block-news__title {
+        @apply mb-11 flex justify-between items-center flex-wrap gap-x-4 lg:flex-nowrap
+    }
+    
+    .block-news__title h3{
+        @apply font-overpass font-bold text-xl lg:text-3xl
+    }
+    
+    .block-news__title span{
+        @apply text-xl font-light text-[#3C4155] self-start max-w-[450px] mt-6 lg:mt-0
+    }
+    
+    .block-news__link {
+        @apply  flex justify-between items-center
+    }
+    
+    .block-news__link p{
+        @apply font-light text-[#3C4155] lg:max-w-[450px] text-base lg:text-xl
+    }
+    
+    .block-news__link img{
+        @apply transition-all max-w-[24px] max-h-[24px] lg:max-h-max lg:max-w-max relative right-0 duration-200
+    }
+    
+    .block-news__link:hover img{
+        @apply rotate-45 transition-all duration-200
+    }
+    
+    .block-news__link:active img{
+        @apply transition-all -right-10 opacity-0 duration-200
+    }
+}
+
+/* shipments */
+@layer components{
+    .shipments {
+        @apply mt-24 grid grid-cols-8 gap-x-0 gap-y-4 lg:gap-x-5 lg:gap-y-0
+    }
+    
+    .shipments__block {
+        @apply flex flex-col justify-between gap-y-5 border-[3px] border-black p-5 col-span-8 lg:col-span-3
+    }
+    
+    .shipments__link {
+        transition: 0.5s;
+        @apply flex flex-col justify-between border-[3px] border-[#00437B] p-5 col-span-8 lg:col-span-2
+    }
+    
+    .shipments__link svg{
+        position: absolute;
+        top: 50px;
+        right: 0px;
+        overflow: visible;
+        transition: .5s;
+    }
+    
+    .shipments__link path {
+        transition: 1.0s;
+    }
+    
+    .shipments__link:hover{
+        background-color: #00437B;
+        transition: 1.2s;
+    }
+    
+    .shipments__link:hover h3{
+        color: #ffff;
+        transition: 0.5s;
+    }
+    
+    .shipments__link:hover path{
+        fill:#ffff;
+        transition: 0.5s;
+    }
+    
+    .shipments__link:hover svg{
+        transition: .5s;
+        @apply rotate-45
+    }
+    
+    .shipments__link:active path{
+        fill: rgba(255, 255, 255, 0.400);  
+        transition: 0.2s;
+        @apply opacity-0
+    }
+    
+    .shipments__link:active svg{
+        right: -160px;
+        transition: .2s;
+    }    
+}
+
+/* shipment-post */
+
+@layer components {
+    .shipment-post {
+        @apply relative max-w-full max-h-fit lg:w-[500px] lg:h-[350px] overflow-hidden
+    }
+
+    .shipment-post__article {
+        @apply bg-orange-500 opacity-0 h-full w-full absolute inset-0 flex flex-col p-4 transition-all duration-500 right-0 -top-full
+    }
+
+    .shipment-post > img{
+        @apply w-full h-full
+    }
+
+    .shipment-post:hover .shipment-post__article,
+    .shipment-post:focus .shipment-post__article{
+        @apply inset-0 opacity-80 transition-all duration-500
+    }
+
+}
+
+/* MODAL MENU */
+@layer components {
+    .modal-menu {
+        @apply hidden fixed z-10 left-0 top-0 w-[100%] h-[100%] overflow-hidden bg-white
+    }
+    
+    .modal-menu__window {
+        @apply mt-8 mx-auto p-[20px] max-w-lg flex flex-col align-middle
+    }
+    
+    .modal-menu__window svg {
+        @apply mb-12 justify-self-end cursor-pointer block 
+    }
+    
+    .modal-menu__window ul{
+        @apply flex flex-col gap-y-9 font-overpass text-xl font-extrabold text-end mb-32
+    }
+    
+}
+.modal-menu_open {
+    @apply block
+}
+
+/* MODAL COLLBACK */
+@layer components {
+    .modal-collback {
+        @apply hidden overflow-hidden flex-col gap-8 lg:gap-14 fixed top-0 left-0 w-full h-full bg-white border-orange-400 border-[10px] z-10
+    }
+
+    .collback-form {
+        @apply flex flex-col gap-10
+    }
+
+    .collback-form__group {
+        @apply relative
+    }
+
+    .collback-form__label {
+        @apply absolute top-4 left-3 z-[-1] text-[#7B7F8B] font-light text-xl px-1 py-0 bg-white transition-all
+    }
+
+    .collback-form__input {
+        @apply bg-transparent w-full h-16 border-[#223062] border-[3px] transition 
+    }
+
+    .collback-form__input_about {
+        @apply bg-transparent w-full h-44 border-[#223062] border-[3px] transition
+    }
+
+    .collback-form__input:hover,
+    .collback-form__input:focus {
+        @apply border-orange-400 ring-orange-400         
+    }
+
+    .collback-form__input:not(:placeholder-shown) {
+        @apply border-orange-400
+    }
+
+    .collback-form__input:focus ~ .collback-form__label,
+    .collback-form__input:not(:placeholder-shown) ~ .collback-form__label{
+        @apply transition-all text-sm -top-2 z-[1]
+    }
+    
+    .collback-form__file-group {
+        @apply flex absolute right-1 bottom-4
+    }
+
+    .collback-form__file-group > input {
+        z-index: -10;
+        opacity: 0;
+        @apply fixed -top-10 -right-10
+    }
+
+    .collback-form__file-group_hover-place {
+        @apply inline-flex gap-1 mr-2 cursor-pointer
+    }
+
+    .collback-form__file-group_hover-place:hover svg,
+    .collback-form__file-group_hover-place:hover label{
+        @apply fill-[#005F9E] text-[#005F9E] cursor-pointer
+    }
+
+    .file-loaded svg {
+        @apply fill-[#005F9E]
+    }
+
+    .file-loaded label {
+        @apply text-[#005F9E]
+    }
+
+    .file-loaded rect{
+       @apply hidden
+    }
+}
+
+.modal-collback_open {
+    @apply flex
+}
+
+
+/* about-vehicle */
+
+@layer components {
+
+    .about-vehicle {
+        @apply py-14 border-[#FF9B00]
+    }
+}
