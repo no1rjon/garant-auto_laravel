@@ -14,13 +14,34 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
-});
-
-Route::get('/home', function () {
     return view('index');
-});
+})->name('home');
 
-Route::get('/index', function () {
-    return view('index');
-})=>name('index');
+Route::get('/category', function () {
+    return view('category');
+})->name('category');;
+
+Route::get('/contacts', function () {
+    return view('contacts');
+})->name('contacts');
+
+Route::get('/news', function () {
+    return view('news');
+})->name('news');
+
+Route::get('/our_shipments', function () {
+    return view('our_shipments');
+})->name('our_shipments');
+
+Route::get('/product', function () {
+    return view('product');
+})->name('product');
+
+Route::get('/services', function () {
+    return view('services');
+})->name('services');
+
+Route::get('/vehicle', function () {
+    return view('vehicle');
+})->name('vehicle');
+
