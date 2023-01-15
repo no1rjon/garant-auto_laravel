@@ -1,7 +1,8 @@
 @extends('static')
 
     @section('title') Каталог @endsection
-
+    @section('tab-product')  border-orange-400 border-b-2 pb-1 @endsection
+    
     @section('main_content')
 
     <main class="mx-auto px-3 lg:px-0 max-w-lg lg:max-w-6xl mt-16">

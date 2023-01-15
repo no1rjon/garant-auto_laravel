@@ -1,7 +1,9 @@
 @extends('static')
 
     @section('title') Главная @endsection
+    @section('body-background') bg-[url('/img/background/group.png')] @endsection
 
+    
     @section('main_content')
   
     <!-- main -->

@@ -1,6 +1,7 @@
 @extends('static')
 
     @section('title') Контакты @endsection
+    @section('tab-contacts')  border-orange-400 border-b-2 pb-1 @endsection
 
     @section('main_content')
 

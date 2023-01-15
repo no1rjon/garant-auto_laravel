@@ -17,7 +17,7 @@
     />    
     <title>@yield('title') - GarantAuto</title>
 </head>
-<body class="bg-first bg-[url('/img/background/group.png')]">
+<body class="bg-first @yield('body-background')]">
 
     <!-- header -->
     <header class="mx-auto py-10 px-3 max-w-lg lg:px-0 lg:max-w-6xl ">
@@ -68,11 +68,11 @@
         <!-- Navigation panel -->
         <nav class="hidden lg:block">
             <ul class="nav">
-                <li><a href="{{ route('product') }}">Каталог спецтехники</a></li>
-                <li><a href="{{ route('services') }}">Услуги</a></li>
-                <li><a href="{{ route('our_shipments') }}">Наши отгрузки</a></li>
-                <li><a href="{{ route('contacts') }}">Контакты</a></li>
-                <li><a href="{{ route('news') }}">Новости</a></li>
+                <li><a class="@yield('tab-product')" href="{{ route('product') }}">Каталог спецтехники</a></li>
+                <li><a class="@yield('tab-services')" href="{{ route('services') }}">Услуги</a></li>
+                <li><a class="@yield('tab-our_shipments')" href="{{ route('our_shipments') }}">Наши отгрузки</a></li>
+                <li><a class="@yield('tab-contacts')" href="{{ route('contacts') }}">Контакты</a></li>
+                <li><a class="@yield('tab-news')" href="{{ route('news') }}">Новости</a></li>
             </ul>
         </nav>
         <!-- modal menu -->
@@ -85,11 +85,11 @@
                     </svg>
                 </div>                        
                 <ul>
-                    <a href="{{ route('product') }}"><li>Каталог спецтехники </li></a>
-                    <a href="{{ route('services') }}"><li>Услуги</li></a>
-                    <a href="{{ route('our_shipments') }}"><li>Наши отгрузки</li></a>
-                    <a href="{{ route('contacts') }}"><li>Контакты</li></a>
-                    <a href="{{ route('news') }}"><li>Новости</li></a>
+                    <a href="{{ route('product') }}"><li class="inline-block @yield('tab-product')">Каталог спецтехники </li></a>
+                    <a href="{{ route('services') }}"><li class="inline-block @yield('tab-services')">Услуги</li></a>
+                    <a href="{{ route('our_shipments') }}"><li class="inline-block @yield('tab-our_shipments')">Наши отгрузки</li></a>
+                    <a href="{{ route('contacts') }}"><li class="inline-block @yield('tab-contacts')">Контакты</li></a>
+                    <a href="{{ route('news') }}"><li class="inline-block @yield('tab-news')">Новости</li></a>
                 </ul>
                 <button class="open-collback font-bold text-xl text-[#111831] border-[#FF9B00] border-[10px] py-1 px-7 button-animation">Обратная связь</button>
             </div>
@@ -145,9 +145,9 @@
     </header>
 
     @yield('main_content')
-
+    
     <!-- footer -->
-    <footer class="pt-20 pb-5 px-2 mx-auto   bg-bottom bg-no-repeat lg:block lg:pb-0">
+    <footer class="pt-20 pb-5 px-2 mx-auto bg-[url('/img/background/back_footer.png')] bg-bottom bg-no-repeat lg:block lg:pb-0]">
         <section class="pt-24 mt-40 mx-auto border-t-[10px] border-[#FF9B00] flex flex-col lg:gap-x-32 pb-1 max-w-lg lg:max-w-6xl lg:flex-row lg:justify-between lg:pb-14">
             <!-- left side -->
             <div class="flex flex-col gap-y-16 ">

@@ -1,6 +1,7 @@
-@extends('static')endsection
+@extends('static')
 
     @section('title') Транспорт @endsection
+    @section('tab-product')  border-orange-400 border-b-2 pb-1 @endsection
 
     @section('main_content')
 

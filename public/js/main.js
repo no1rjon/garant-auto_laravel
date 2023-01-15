@@ -71,3 +71,24 @@ new Swiper('.popQueryImageSwiper', {
   nested: true,
 
 });
+
+new Swiper('.ourShipmentsSwiper', {
+  
+  navigation: {
+    nextEl: '.ourShipmentsSwiper-button-next',
+    prevEl: '.ourShipmentsSwiper-button-prev',
+  },
+  allowTouchMove: false,
+  effect: 'creative',
+  
+});
+
+new Swiper('.ourShipmentsSwiperImgIn', {
+  pagination: {
+    el: '.ourShipmentsSwiperImgIn-pagination',
+    type: 'bullets',
+    clickable: true,
+  },
+  
+  nested: true,
+});

@@ -1,6 +1,7 @@
 @extends('static')
 
     @section('title') Новости @endsection
+    @section('tab-news')  border-orange-400 border-b-2 pb-1 @endsection
 
     @section('main_content')
 
