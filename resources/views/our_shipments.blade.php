@@ -62,23 +62,23 @@
 
                     {{-- inserted swiper img --}}
                     <div class="ourShipmentsSwiperImgIn overflow-hidden relative bg-white">
-                        <div class="swiper-wrapper w-full h-[80%] lg:w-[60%]">
+                        <div class="swiper-wrapper w-full h-[80%] lg:w-full">
                             <div class="swiper-slide"><img class="h-full w-full object-cover" src="/img/shipment/shipment_third.png" alt=""></div>
                             <div class="swiper-slide"><img class="h-full w-full object-cover" src="/img/shipment/shipment_first.png" alt=""></div>
                         </div>
                         <div class="ourShipmentsSwiperImgIn-pagination absolute bottom-10 right-[40%] z-20 flex justify-center"></div>
                     </div>
                     {{-- text --}}
-                    <article class="bg-[#FF9B00F2] w-full h-[60%] md:h-[40%] lg:h-full lg:w-[40%] flex flex-col px-4">
+                    <article class="bg-[#FF9B00F2] w-full h-[60%] md:h-[40%] lg:h-full lg:w-[600px] flex flex-col px-4">
                         <div class="flex flex-col content-between justify-between overflow-hidden h-full w-full">
                             <div class="h-[80%] overflow-hidden pt-10 lg:pt-20">
-                                <p class="h-full font-semibold text-xl overflow-y-auto">
+                                <p class="h-full font-semibold text-xl overflow-y-auto overflow-x-hidden">
                                     Клиенту из Москвы, передан крупный экскаватор для сноса зданий-Doosan 360 будет работать с гидроножницами.<br>
-                                    Клиенту из Москвы, передан крупный экскаватор для сноса зданий-Doosan 360 будет работать с гидроножницами.<br>
-                                    Клиенту из Москвы, передан крупный экскаватор для сноса зданий-Doosan 360 будет работать с гидроножницами.<br>
-                                    Клиенту из Москвы, передан крупный экскаватор для сноса зданий-Doosan 360 будет работать с гидроножницами.<br>
-                                    Клиенту из Москвы, передан крупный экскаватор для сноса зданий-Doosan 360 будет работать с гидроножницами.<br>
-                                    Клиенту из Москвы, передан крупный экскаватор для сноса зданий-Doosan 360 будет работать с гидроножницами.<br>
+                                    Клиенту из Москвы, передан крупный экскаватор для сноса зданий-Doosan 360 будет работать с гидроножницами.
+                                    Клиенту из Москвы, передан крупный экскаватор для сноса зданий-Doosan 360 будет работать с гидроножницами.
+                                    Клиенту из Москвы, передан крупный экскаватор для сноса зданий-Doosan 360 будет работать с гидроножницами.
+                                    Клиенту из Москвы, передан крупный экскаватор для сноса зданий-Doosan 360 будет работать с гидроножницами.
+                                    Клиенту из Москвы, передан крупный экскаватор для сноса зданий-Doosan 360 будет работать с гидроножницами.
                                     - Экскаватор-разрушитель Doosan обладает высоким уровнем маневренности;<br>
                                     - Для машиниста в процессе работы созданы комфортные условия.<br>
                                     - Оператор, защищен от попадания пыли в глаза, так как это предусмотрено особенностями конструкции техники, и что крайне важно, ничего не мешает обзору.
@@ -101,14 +101,14 @@
 
                     {{-- inserted swiper img --}}
                     <div class="ourShipmentsSwiperImgIn overflow-hidden relative bg-white">
-                        <div class="swiper-wrapper w-full h-[80%] lg:w-[60%]">
-                            <div class="swiper-slide"><img class="h-full w-full object-cover" src="/img/shipment/shipment_second.png" alt=""></div>
-                            <div class="swiper-slide"><img class="h-full w-full object-cover" src="/img/shipment/shipment_second.png" alt=""></div>
+                        <div class="swiper-wrapper w-full h-[80%] lg:w-full">
+                            <div class="swiper-slide"><img class="h-full w-full object-cover" src="/img/shipment/shipment_first.png" alt=""></div>
+                            <div class="swiper-slide"><img class="h-full w-full object-cover" src="/img/shipment/shipment_first.png" alt=""></div>
                         </div>
                         <div class="ourShipmentsSwiperImgIn-pagination absolute bottom-10 right-[40%] z-20 flex justify-center"></div>
                     </div>
                     {{-- text --}}
-                    <article class="bg-[#FF9B00F2] w-full h-[60%] md:h-[40%] lg:h-full lg:w-[40%] flex flex-col px-4">
+                    <article class="bg-[#FF9B00F2] w-full h-[60%] md:h-[40%] lg:h-full lg:w-[600px] flex flex-col px-4">
                         <div class="flex flex-col content-between justify-between overflow-hidden h-full w-full">
                             <div class="h-[80%] overflow-hidden pt-10 lg:pt-20">
                                 <p class="h-full font-semibold text-xl overflow-y-auto overflow-x-hidden">
